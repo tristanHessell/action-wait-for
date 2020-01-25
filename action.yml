@@ -1,0 +1,19 @@
+name: 'Wait-For-Localhost'
+description: 'Wait for a tcp connection to open on localhost'
+inputs:
+  timeout:
+    description: 'number of seconds until we fail the action'
+    required: true
+    default: 60
+  sleep:
+    description: 'number of seconds between connection check'
+    required: true
+    default: 2
+  port:
+    descripton: 'port that application in question is listening  on'
+    required: true
+    default: 9000
+runs:
+  using: 'node12'
+  main: 'index.js'
+
